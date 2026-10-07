@@ -1,44 +1,629 @@
+```
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de senha</title>
+
+    <meta
+        name="description"
+        content="PasswordCheck - ferramenta educativa para análise da segurança de senhas."
+    >
+
+    <title>PasswordCheck | Segurança de Senhas</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <section class="conteudo">
-        <div class="conteudo-titulo">
-            <img src="unlock.svg" alt="cadeado fechado">
-            <h2 class="titulo-principal">Gerador de senhas</h2>
-            <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
-        </div>
-        <div class="conteudo-senha">
-            <label for="senha">Senha</label>
-            <input name="senha" type="text" id="campo-senha">
-        </div>
-        <div class="parametro">
-            <h3 class="parametro-titulo">Personalize sua senha</h3>
-            <div class="parametro-coluna__senha">
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Número de caracteres</h4>
-                    <div class="parametro-senha-botoes">
-                        <button class="parametro-senha__botao">-</button>
-                        <p class="parametro-senha__texto">12</p>
-                        <button class="parametro-senha__botao">+</button>
-                    </div>
-                </div>               
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Características da senha</h4>
-                </div>
-                <div class="parametro-senha">
-                    <h4 class="parametro-senha__titulo">Força da senha</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
 
+    <header class="header">
+        <nav class="navbar">
+
+            <a href="#inicio" class="logo">
+                <span>🔐</span> PasswordCheck
+            </a>
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Abrir menu"
+            >
+                ☰
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#analisador">Analisador</a></li>
+                <li><a href="#matematica">Matemática</a></li>
+                <li><a href="#seguranca">Segurança</a></li>
+                <li><a href="#comparacao">Comparação</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    🛡️ Segurança digital
+                </div>
+
+                <h1>
+                    Sua senha é
+                    <span>realmente segura?</span>
+                </h1>
+
+                <p>
+                    Descubra a força da sua senha utilizando programação,
+                    matemática e princípios de segurança digital.
+                </p>
+
+                <a href="#analisador" class="primary-button">
+                    Analisar minha senha →
+                </a>
+
+            </div>
+
+            <div class="hero-card">
+
+                <div class="floating-icon">
+                    🔐
+                </div>
+
+                <div class="mini-code">
+                    <span>const</span> senha = <span>"********"</span>;
+                    <br><br>
+                    <span>security</span>.check(senha);
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    Sistema de análise ativo
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section analyzer-section" id="analisador">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    01 — ANALISADOR
+                </span>
+
+                <h2>
+                    Teste a força da sua senha
+                </h2>
+
+                <p>
+                    Digite uma senha abaixo. A análise acontece
+                    localmente no seu navegador.
+                </p>
+
+            </div>
+
+            <div class="analyzer">
+
+                <div class="input-area">
+
+                    <label for="password">
+                        Digite uma senha para testar
+                    </label>
+
+                    <div class="password-input">
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Digite sua senha..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="togglePassword"
+                            type="button"
+                            aria-label="Mostrar senha"
+                        >
+                            👁️
+                        </button>
+
+                    </div>
+
+                    <div class="strength-container">
+
+                        <div class="strength-header">
+
+                            <span>
+                                Força da senha
+                            </span>
+
+                            <strong id="strengthText">
+                                Nenhuma
+                            </strong>
+
+                        </div>
+
+                        <div class="strength-bar">
+                            <div id="strengthBar"></div>
+                        </div>
+
+                        <div class="score">
+
+                            Pontuação:
+                            <strong id="score">0</strong>/100
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="requirements">
+
+                    <h3>
+                        Requisitos de segurança
+                    </h3>
+
+                    <ul>
+
+                        <li id="lengthCheck">
+                            <span>○</span>
+                            Pelo menos 8 caracteres
+                        </li>
+
+                        <li id="longCheck">
+                            <span>○</span>
+                            12 caracteres ou mais
+                        </li>
+
+                        <li id="lowerCheck">
+                            <span>○</span>
+                            Letra minúscula
+                        </li>
+
+                        <li id="upperCheck">
+                            <span>○</span>
+                            Letra maiúscula
+                        </li>
+
+                        <li id="numberCheck">
+                            <span>○</span>
+                            Número
+                        </li>
+
+                        <li id="symbolCheck">
+                            <span>○</span>
+                            Símbolo especial
+                        </li>
+
+                        <li id="sequenceCheck">
+                            <span>○</span>
+                            Evitar sequências óbvias
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="warning-box">
+
+                <span>💡</span>
+
+                <div>
+
+                    <strong>
+                        Importante
+                    </strong>
+
+                    <p>
+                        Este projeto é educativo. A senha digitada
+                        não é enviada para um servidor e não é armazenada.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section dark-section" id="matematica">
+
+            <div class="section-heading light">
+
+                <span class="section-tag">
+                    02 — MATEMÁTICA
+                </span>
+
+                <h2>
+                    A matemática por trás da segurança
+                </h2>
+
+                <p>
+                    A quantidade de possibilidades aumenta conforme
+                    aumentamos o tamanho e a variedade dos caracteres.
+                </p>
+
+            </div>
+
+            <div class="formula-card">
+
+                <div class="formula">
+                    H ≈ L × log₂(R)
+                </div>
+
+                <p>
+                    Essa fórmula representa uma estimativa simplificada
+                    da entropia de uma senha.
+                </p>
+
+                <div class="formula-grid">
+
+                    <div>
+                        <strong>H</strong>
+                        <span>Entropia estimada</span>
+                    </div>
+
+                    <div>
+                        <strong>L</strong>
+                        <span>Quantidade de caracteres</span>
+                    </div>
+
+                    <div>
+                        <strong>R</strong>
+                        <span>Tamanho do conjunto de caracteres</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="math-explanation">
+
+                <div class="math-card">
+
+                    <span class="math-icon">
+                        🔢
+                    </span>
+
+                    <h3>
+                        Mais caracteres
+                    </h3>
+
+                    <p>
+                        Uma senha maior possui mais combinações
+                        possíveis, dificultando ataques por tentativa.
+                    </p>
+
+                </div>
+
+                <div class="math-card">
+
+                    <span class="math-icon">
+                        🔤
+                    </span>
+
+                    <h3>
+                        Mais variedade
+                    </h3>
+
+                    <p>
+                        Misturar letras, números e símbolos aumenta
+                        o conjunto de possibilidades.
+                    </p>
+
+                </div>
+
+                <div class="math-card">
+
+                    <span class="math-icon">
+                        🧠
+                    </span>
+
+                    <h3>
+                        Menos previsibilidade
+                    </h3>
+
+                    <p>
+                        Evitar palavras comuns e sequências torna
+                        a senha mais difícil de adivinhar.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section" id="seguranca">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    03 — SEGURANÇA
+                </span>
+
+                <h2>
+                    Como criar uma senha mais segura?
+                </h2>
+
+                <p>
+                    Uma boa senha não depende apenas de símbolos aleatórios.
+                    Comprimento e imprevisibilidade também são importantes.
+                </p>
+
+            </div>
+
+            <div class="security-grid">
+
+                <article class="security-card">
+
+                    <div class="card-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Use senhas longas
+                    </h3>
+
+                    <p>
+                        Prefira senhas ou frases-senha longas.
+                        Quanto maior o tamanho, maior tende a ser
+                        o número de combinações.
+                    </p>
+
+                </article>
+
+                <article class="security-card">
+
+                    <div class="card-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Evite informações pessoais
+                    </h3>
+
+                    <p>
+                        Nome, aniversário, telefone e nomes de familiares
+                        podem ser informações fáceis de descobrir.
+                    </p>
+
+                </article>
+
+                <article class="security-card">
+
+                    <div class="card-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Não reutilize senhas
+                    </h3>
+
+                    <p>
+                        Usar a mesma senha em vários serviços aumenta
+                        o impacto de um possível vazamento.
+                    </p>
+
+                </article>
+
+                <article class="security-card">
+
+                    <div class="card-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Use autenticação em dois fatores
+                    </h3>
+
+                    <p>
+                        Sempre que possível, utilize uma segunda camada
+                        de proteção além da senha.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <section class="section comparison-section" id="comparacao">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    04 — ANÁLISE CRÍTICA
+                </span>
+
+                <h2>
+                    Boas e más práticas na Web
+                </h2>
+
+                <p>
+                    Uma análise crítica ajuda a identificar características
+                    que tornam um site mais seguro e fácil de utilizar.
+                </p>
+
+            </div>
+
+            <div class="comparison-table">
+
+                <div class="table-header">
+
+                    <div>Critério</div>
+                    <div>Boa prática</div>
+                    <div>Má prática</div>
+
+                </div>
+
+                <div class="table-row">
+
+                    <div>🔒 Criptografia</div>
+                    <div class="good">✓ HTTPS</div>
+                    <div class="bad">✕ HTTP</div>
+
+                </div>
+
+                <div class="table-row">
+
+                    <div>📱 Responsividade</div>
+                    <div class="good">✓ Adaptado ao celular</div>
+                    <div class="bad">✕ Layout quebrado</div>
+
+                </div>
+
+                <div class="table-row">
+
+                    <div>🔑 Senhas</div>
+                    <div class="good">✓ Boas práticas</div>
+                    <div class="bad">✕ Senhas previsíveis</div>
+
+                </div>
+
+                <div class="table-row">
+
+                    <div>🛡️ Autenticação</div>
+                    <div class="good">✓ 2FA disponível</div>
+                    <div class="bad">✕ Apenas senha</div>
+
+                </div>
+
+                <div class="table-row">
+
+                    <div>💬 Feedback</div>
+                    <div class="good">✓ Mensagens claras</div>
+                    <div class="bad">✕ Nenhuma orientação</div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="technologies">
+
+            <div class="section-heading light">
+
+                <span class="section-tag">
+                    05 — TECNOLOGIAS
+                </span>
+
+                <h2>
+                    O que foi utilizado?
+                </h2>
+
+            </div>
+
+            <div class="tech-grid">
+
+                <div class="tech-card">
+
+                    <span>🌐</span>
+
+                    <h3>
+                        HTML5
+                    </h3>
+
+                    <p>
+                        Estrutura e conteúdo do site.
+                    </p>
+
+                </div>
+
+                <div class="tech-card">
+
+                    <span>🎨</span>
+
+                    <h3>
+                        CSS3
+                    </h3>
+
+                    <p>
+                        Design, animações e responsividade.
+                    </p>
+
+                </div>
+
+                <div class="tech-card">
+
+                    <span>⚡</span>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Lógica e análise das senhas.
+                    </p>
+
+                </div>
+
+                <div class="tech-card">
+
+                    <span>🐙</span>
+
+                    <h3>
+                        GitHub
+                    </h3>
+
+                    <p>
+                        Versionamento e publicação do projeto.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <div>
+
+                <a href="#inicio" class="logo">
+                    <span>🔐</span> PasswordCheck
+                </a>
+
+                <p>
+                    Projeto acadêmico sobre programação,
+                    matemática e segurança digital.
+                </p>
+
+            </div>
+
+            <div class="footer-info">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>GitHub</span>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 PasswordCheck — Projeto acadêmico
+        </div>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
+```
