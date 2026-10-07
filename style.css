@@ -1,5 +1,4 @@
-
-
+```
 * {
     margin: 0;
     padding: 0;
@@ -43,9 +42,7 @@ input {
     font: inherit;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 .header {
     position: sticky;
@@ -61,7 +58,6 @@ input {
     height: 72px;
     margin: auto;
     padding: 0 25px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -101,21 +97,16 @@ input {
     cursor: pointer;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero {
     min-height: 650px;
     padding: 90px 7%;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 70px;
-
     color: white;
-
     background:
         radial-gradient(
             circle at 80% 30%,
@@ -133,10 +124,8 @@ input {
     display: inline-block;
     padding: 8px 14px;
     border-radius: 50px;
-
     background: rgba(108, 92, 231, 0.15);
     border: 1px solid rgba(108, 92, 231, 0.5);
-
     color: #bdb5ff;
     font-size: 0.8rem;
     font-weight: bold;
@@ -152,13 +141,7 @@ input {
 
 .hero h1 span {
     display: block;
-
-    background: linear-gradient(
-        90deg,
-        #8d7dff,
-        #00d4ff
-    );
-
+    background: linear-gradient(90deg, #8d7dff, #00d4ff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -173,20 +156,11 @@ input {
 
 .primary-button {
     display: inline-block;
-
     padding: 15px 25px;
-
     border-radius: 10px;
-
     color: white;
-    background: linear-gradient(
-        135deg,
-        var(--primary),
-        #8578ff
-    );
-
+    background: linear-gradient(135deg, var(--primary), #8578ff);
     font-weight: bold;
-
     transition: 0.3s;
 }
 
@@ -195,28 +169,20 @@ input {
     box-shadow: 0 12px 30px rgba(108, 92, 231, 0.3);
 }
 
-/* =========================
-   HERO CARD
-========================= */
+/* HERO CARD */
 
 .hero-card {
     width: 350px;
     min-height: 350px;
-
     padding: 35px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     border-radius: 25px;
-
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
-
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-
     transform: rotate(2deg);
 }
 
@@ -228,12 +194,9 @@ input {
 .mini-code {
     width: 100%;
     padding: 18px;
-
     border-radius: 10px;
-
     background: #080c16;
     color: #b8c1dc;
-
     font-family: monospace;
     font-size: 0.8rem;
 }
@@ -250,21 +213,15 @@ input {
 
 .status-dot {
     display: inline-block;
-
     width: 8px;
     height: 8px;
-
     margin-right: 7px;
-
     border-radius: 50%;
     background: #16c784;
-
     box-shadow: 0 0 10px #16c784;
 }
 
-/* =========================
-   SEÇÕES
-========================= */
+/* SEÇÕES */
 
 .section {
     padding: 100px 7%;
@@ -278,12 +235,10 @@ input {
 
 .section-tag {
     display: block;
-
     color: var(--primary);
     font-size: 0.75rem;
     font-weight: 800;
     letter-spacing: 2px;
-
     margin-bottom: 15px;
 }
 
@@ -309,9 +264,7 @@ input {
     color: #8e82ff;
 }
 
-/* =========================
-   ANALISADOR
-========================= */
+/* ANALISADOR */
 
 .analyzer-section {
     background: var(--light);
@@ -320,17 +273,12 @@ input {
 .analyzer {
     max-width: 1000px;
     margin: auto;
-
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
-
     background: white;
-
     border: 1px solid #e8eaf1;
     border-radius: 20px;
-
     overflow: hidden;
-
     box-shadow: 0 20px 60px rgba(26, 32, 52, 0.08);
 }
 
@@ -346,12 +294,9 @@ input {
 
 .password-input {
     display: flex;
-
     border: 2px solid #e2e5ec;
     border-radius: 12px;
-
     overflow: hidden;
-
     transition: 0.3s;
 }
 
@@ -362,25 +307,19 @@ input {
 .password-input input {
     width: 100%;
     padding: 16px;
-
     border: none;
     outline: none;
-
     font-size: 1rem;
 }
 
 .password-input button {
     width: 55px;
-
     border: none;
     background: transparent;
-
     cursor: pointer;
 }
 
-/* =========================
-   FORÇA DA SENHA
-========================= */
+/* FORÇA */
 
 .strength-container {
     margin-top: 35px;
@@ -399,9 +338,7 @@ input {
 .strength-bar {
     width: 100%;
     height: 10px;
-
     overflow: hidden;
-
     border-radius: 20px;
     background: #e9ebf2;
 }
@@ -409,26 +346,18 @@ input {
 #strengthBar {
     width: 0%;
     height: 100%;
-
     border-radius: inherit;
-
     background: var(--red);
-
-    transition:
-        width 0.4s,
-        background 0.4s;
+    transition: width 0.4s, background 0.4s;
 }
 
 .score {
     margin-top: 10px;
-
     color: var(--muted);
     font-size: 0.9rem;
 }
 
-/* =========================
-   REQUISITOS
-========================= */
+/* REQUISITOS */
 
 .requirements {
     padding: 45px;
@@ -445,10 +374,8 @@ input {
 
 .requirements li {
     padding: 10px 0;
-
     color: #73798a;
     font-size: 0.9rem;
-
     transition: 0.2s;
 }
 
@@ -470,24 +397,17 @@ input {
     color: var(--red);
 }
 
-/* =========================
-   AVISO
-========================= */
+/* AVISO */
 
 .warning-box {
     max-width: 1000px;
     margin: 25px auto 0;
-
     display: flex;
     gap: 15px;
-
     padding: 20px;
-
     border-radius: 12px;
-
     background: #fff8e6;
     border: 1px solid #ffe5a6;
-
     color: #795b14;
 }
 
@@ -496,9 +416,7 @@ input {
     font-size: 0.85rem;
 }
 
-/* =========================
-   MATEMÁTICA
-========================= */
+/* MATEMÁTICA */
 
 .dark-section {
     background:
@@ -513,24 +431,17 @@ input {
 .formula-card {
     max-width: 900px;
     margin: auto;
-
     padding: 50px;
-
     text-align: center;
-
     border-radius: 20px;
-
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .formula {
     font-size: clamp(2rem, 5vw, 4rem);
-
     font-weight: bold;
-
     color: white;
-
     margin-bottom: 20px;
 }
 
@@ -540,24 +451,19 @@ input {
 
 .formula-grid {
     margin-top: 35px;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: 20px;
 }
 
 .formula-grid div {
     padding: 20px;
-
     border-radius: 12px;
-
     background: rgba(255, 255, 255, 0.04);
 }
 
 .formula-grid strong {
     display: block;
-
     color: #9185ff;
     font-size: 1.5rem;
 }
@@ -569,20 +475,15 @@ input {
 
 .math-explanation {
     max-width: 1100px;
-
     margin: 30px auto 0;
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
     gap: 20px;
 }
 
 .math-card {
     padding: 30px;
-
     border-radius: 15px;
-
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -601,31 +502,22 @@ input {
     font-size: 0.9rem;
 }
 
-/* =========================
-   SEGURANÇA
-========================= */
+/* SEGURANÇA */
 
 .security-grid {
     max-width: 1100px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-
     gap: 20px;
 }
 
 .security-card {
     position: relative;
-
     padding: 35px;
-
     border-radius: 15px;
-
     background: white;
-
     border: 1px solid #e8eaf0;
-
     transition: 0.3s;
 }
 
@@ -649,9 +541,7 @@ input {
     font-size: 0.9rem;
 }
 
-/* =========================
-   COMPARAÇÃO
-========================= */
+/* COMPARAÇÃO */
 
 .comparison-section {
     background: var(--light);
@@ -660,12 +550,9 @@ input {
 .comparison-table {
     max-width: 1000px;
     margin: auto;
-
     background: white;
-
     border: 1px solid #e5e8ef;
     border-radius: 15px;
-
     overflow: hidden;
 }
 
@@ -677,18 +564,14 @@ input {
 
 .table-header {
     padding: 20px;
-
     background: var(--dark);
-
     color: white;
     font-weight: bold;
 }
 
 .table-row {
     padding: 20px;
-
     border-bottom: 1px solid #edf0f5;
-
     font-size: 0.9rem;
 }
 
@@ -706,33 +589,25 @@ input {
     font-weight: bold;
 }
 
-/* =========================
-   TECNOLOGIAS
-========================= */
+/* TECNOLOGIAS */
 
 .technologies {
     padding: 90px 7%;
-
     background: #080c18;
 }
 
 .tech-grid {
     max-width: 1100px;
     margin: auto;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     gap: 20px;
 }
 
 .tech-card {
     padding: 30px;
-
     text-align: center;
-
     border-radius: 15px;
-
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -751,22 +626,17 @@ input {
     font-size: 0.8rem;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 .footer {
     padding: 50px 7% 25px;
-
     background: #060911;
-
     color: white;
 }
 
 .footer-content {
     max-width: 1100px;
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -774,9 +644,7 @@ input {
 
 .footer p {
     max-width: 400px;
-
     margin-top: 15px;
-
     color: #7d869d;
     font-size: 0.85rem;
 }
@@ -789,39 +657,28 @@ input {
 
 .footer-info span {
     padding: 6px 10px;
-
     border-radius: 5px;
-
     background: #111827;
-
     color: #9da6bd;
-
     font-size: 0.7rem;
 }
 
 .copyright {
     max-width: 1100px;
-
     margin: 40px auto 0;
     padding-top: 20px;
-
     border-top: 1px solid #151c2c;
-
     color: #596176;
-
     font-size: 0.75rem;
 }
 
-/* =========================
-   RESPONSIVIDADE
-========================= */
+/* RESPONSIVIDADE */
 
 @media (max-width: 900px) {
 
     .hero {
         padding-top: 70px;
         padding-bottom: 70px;
-
         flex-direction: column;
         text-align: center;
     }
@@ -861,19 +718,13 @@ input {
 
     .nav-links {
         position: absolute;
-
         top: 65px;
         left: 0;
-
         width: 100%;
-
         display: none;
         flex-direction: column;
-
         padding: 20px;
-
         background: #0b1020;
-
         text-align: center;
     }
 
@@ -959,6 +810,9 @@ input {
 
     .warning-box {
         flex-direction: column;
+    }
+}
+```
     }
 }
 ```
